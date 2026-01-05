@@ -1,0 +1,609 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --baby-blue: #89CFF0;
+    --baby-blue-light: #B4E4FF;
+    --baby-blue-dark: #5FA8D3;
+    --white: #FFFFFF;
+    --text-dark: #2C3E50;
+    --text-light: #7F8C8D;
+    --gold: #D4AF37;
+    --shadow: rgba(137, 207, 240, 0.3);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(137, 207, 240, 0.7) 0%, rgba(137, 207, 240, 0.8) 50%, rgba(95, 168, 211, 0.85) 100%),
+        url('/home/zeljkos/Documents/weding-project/images/image2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.names {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.bride, .groom {
+    font-family: 'Great Vibes', cursive;
+}
+
+.ampersand {
+    font-size: 2.5rem;
+    color: var(--gold);
+    animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+/* Fade in animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1.5s ease-in 0.5s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating hearts */
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2rem;
+    animation: float 15s infinite ease-in-out;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    position: relative;
+    animation: bounce 2s infinite;
+}
+
+.mouse::before {
+    content: '';
+    width: 6px;
+    height: 10px;
+    background: var(--white);
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+@keyframes scroll {
+    0% { opacity: 1; top: 10px; }
+    100% { opacity: 0; top: 25px; }
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--baby-blue-dark);
+}
+
+/* Date Section */
+.date-section {
+    background: linear-gradient(to bottom, var(--white) 0%, var(--baby-blue-light) 100%);
+}
+
+.calendar-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px var(--shadow);
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.calendar-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.calendar-header {
+    background: linear-gradient(135deg, var(--baby-blue) 0%, var(--baby-blue-dark) 100%);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.month {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.year {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.calendar-body {
+    padding: 40px;
+    text-align: center;
+    background: var(--white);
+}
+
+.day-number {
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--baby-blue-dark);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.day-name {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.calendar-footer {
+    background: var(--baby-blue-light);
+    padding: 20px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.date-description {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+.gallery-item.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-item:nth-child(1) { transition-delay: 0.1s; }
+.gallery-item:nth-child(2) { transition-delay: 0.2s; }
+.gallery-item:nth-child(3) { transition-delay: 0.3s; }
+.gallery-item:nth-child(4) { transition-delay: 0.4s; }
+
+.placeholder-image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--baby-blue-light), var(--baby-blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+ /* Replace these with your actual images by uncommenting and updating paths: */
+.image-1 { background-image: url('/home/zeljkos/Documents/weding-project/images/image1.jpg'); }
+.image-2 { background-image: url('/home/zeljkos/Documents/weding-project/images/image2.jpg'); }
+.image-3 { background-image: url('/home/zeljkos/Documents/weding-project/images/image3.jpg'); }
+.image-4 { background-image: url('path/to/your/image4.jpg'); }
+
+
+.placeholder-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.image-text {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.placeholder-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.gallery-item:hover .placeholder-image {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .placeholder-image::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.gallery-note {
+    text-align: center;
+    color: var(--text-light);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Venue Section */
+.venue-section {
+    background: linear-gradient(to bottom, var(--white) 0%, var(--baby-blue-light) 100%);
+}
+
+.venue-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.venue-info {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.venue-info.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.venue-info h3 {
+    font-size: 2.5rem;
+    color: var(--baby-blue-dark);
+    margin-bottom: 1rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.address {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.venue-details {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.venue-details p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+.venue-details strong {
+    color: var(--baby-blue-dark);
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.map-container.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.btn-directions {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--baby-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-directions:hover {
+    background: var(--baby-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--shadow);
+}
+
+/* RSVP Section */
+.rsvp-section {
+    background: linear-gradient(135deg, var(--baby-blue) 0%, var(--baby-blue-dark) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.rsvp-text {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn-rsvp {
+    display: inline-block;
+    padding: 20px 50px;
+    background: var(--white);
+    color: var(--baby-blue-dark);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-rsvp:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.heart-divider {
+    color: var(--baby-blue);
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .names {
+        font-size: 2rem;
+        gap: 1rem;
+    }
+
+    .ampersand {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .venue-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .venue-info,
+    .map-container {
+        transform: none;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-number {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .names {
+        flex-direction: column;
+        font-size: 1.8rem;
+        gap: 0.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .calendar-card {
+        max-width: 100%;
+    }
+
+    .btn-rsvp {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
