@@ -34,7 +34,7 @@ body {
     height: 100vh;
     background:
         linear-gradient(135deg, rgba(137, 207, 240, 0.7) 0%, rgba(137, 207, 240, 0.8) 50%, rgba(95, 168, 211, 0.85) 100%),
-        url('/home/zeljkos/Documents/weding-project/images/image2.jpg');
+        url('images/image2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -350,10 +350,10 @@ section {
 }
 
  /* Replace these with your actual images by uncommenting and updating paths: */
-.image-1 { background-image: url('/home/zeljkos/Documents/weding-project/images/image1.jpg'); }
-.image-2 { background-image: url('/home/zeljkos/Documents/weding-project/images/image2.jpg'); }
-.image-3 { background-image: url('/home/zeljkos/Documents/weding-project/images/image3.jpg'); }
-.image-4 { background-image: url('path/to/your/image4.jpg'); }
+.image-1 { background-image: url('images/image1.jpg'); }
+.image-2 { background-image: url('images/image2.jpg'); }
+.image-3 { background-image: url('images/image3.jpg'); }
+.image-4 { background-image: url('images/image4.jpg'); }
 
 
 .placeholder-image {
