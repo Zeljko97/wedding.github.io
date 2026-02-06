@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap&subset=latin,latin-ext" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap&subset=latin,latin-ext"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="fade-in">We're Getting Married!</h1>
+            <h1 class="fade-in">It’s a forever thing!</h1>
             <div class="names fade-in-delay">
                 <span class="bride">Kristina</span>
                 <span class="ampersand">&</span>
@@ -35,6 +39,10 @@
     <!-- Date Section with Calendar -->
     <section class="date-section">
         <div class="container">
+            <div class="section-call">
+                Dragi naši,
+                <br>Pozivamo vas da nam se pridružite i proslavite sa nama dan našeg venčanja!
+            </div>
             <h2 class="section-title">Zabeležite datum</h2>
             <div class="calendar-card">
                 <div class="calendar-header">
@@ -46,23 +54,51 @@
                     <div class="day-name">Subota</div>
                 </div>
                 <div class="calendar-footer">
-                    <div class="time">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        <span>5:00 PM</span>
-                    </div>
                 </div>
             </div>
-            <p class="date-description">Pridružite nam se da zajedno slavimo ljubav!</p>
+            <div class="section-call-second">
+                Pozivamo vas da nam se pridružite i proslavite sa nama dan našeg venčanja!
+            </div>
+
+            <ul class="section-schedule">
+                <li> Crkveno venčanje – 13:00 </li>
+                <li> Dolazak u restoran – 15:00 </li>
+                <li> Građansko venčanje – 15:45 </li>
+                <li> Svečana večera – 18:00 </li>
+                <li> Slavlje – dok nas ne isteraju</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="countdown-title">Do našeg venčanja</h2>
+            <div class="countdown-timer" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Dana</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Sati</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minuta</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Sekundi</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Photo Gallery -->
     <section class="gallery-section">
         <div class="container">
-            <h2 class="section-title">Naša priča</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="placeholder-image image-1">
@@ -86,49 +122,112 @@
     <!-- Venue & Map Section -->
     <section class="venue-section">
         <div class="container">
-            <h2 class="section-title">Lokacija i uputstva</h2>
-            <div class="venue-content">
-                <div class="venue-info">
-                    <h3>Forest Hall Event Centar</h3>
-                    <p class="address">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        Ulica i broj<br>
-                        Beograd
-                    </p>
-                    <div class="venue-details">
-                        <p><strong>Okupljanje gostiju:</strong> 12:00h </p>
-                        <p><strong>Ceremonija venčanja u crkvi:</strong> 14:00h </p>
-                        <p><strong>Ceremonija venčanja u restoranu:</strong> 17:00h </p>
-                    </div>
-                </div>
-                <div class="map-container">
-                    <!-- Embedded Google Maps iframe - replace with your actual location -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.748441779328864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <div class="map-overlay">
-                        <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
-                    </div>
-                </div>
+            <h2 class="section-location">Lokacija</h2>
+
+            <h3 class="section-location">Crkveno Venčanje</h3>
+
+            <div class="venue-content section-location-desc">
+                Lokacija: <strong>Crkva Svetog Marka</strong> <br />
+                <li>Adresa: <strong>Bulevar kralja Aleksandra 17, Beograd, park Tašmajdan</strong></li>
+                <li>Početak ceremonije: <strong>13h</strong></li> <br />
+                <strong>Parking:</strong> Predlažemo Vam da potažite mesto u ulicama : Svetozara Markovića, Resavska,
+                Krunska, Bulevar kralja, Aleksandra ili u ulicama ispod Tašmajdana - Ilije Garašanina ili 27. Marta.
+
+                Ukoliko ste u žurbi i potrebna Vam je sigurnija opcija, postoje dve gradske garaže na pešačkoj distanci
+                od 10ak minuta od crkve: <br />
+                <li> Garaža u Masarikovoj 4 </li>
+                <li> Garaža kod Pionirskoj parka (ukoliko bude otvorena), na adresi Dragoslava Jovanovića 2. </li>
+            </div>
+            <a href="https://maps.google.com/?q=Crkva+Svetog+Marka+Beograd" target="_blank" class="btn-map">
+                Otvori u Google Maps
+            </a>
+
+            <h3 class="section-location">Građansko Venčanje</h3>
+            <div class="venue-content section-location-desc">
+                Lokacija: <strong>Forest Hall</strong> <br />
+                <li>Adresa na Google Maps-u: <strong>Forest Hall Beograd</strong></li>
+                <li>Okupljanje gostiju: <strong>15h</strong> </li>
+                <li>Početak ceremonije: <strong>15:45h</strong> </li>
+                <li>Parking: <strong>Obezbeđen</strong> </li>
+                Napomena: Na Google mapi ukucajte <strong>Forest Hall Beograd. <br />
+                    Restoran je udaljen 400m od Memorijalnog parka Jajinci, nalazi se u istoj ulici sa suprotne
+                    strane.</strong> <br />
+            </div>
+
+            <div class="venue-content section-location-desc">
+                <strong> Napomena za goste iz Banovaca </strong>
+                <br/>
+                <li>Najbliža ruta do restorana je preko obilaznice. Na <strong>Google Maps-u</strong> ukucajte <strong>Forest Hall Beograd.</strong> </li>
+                <li>Najbrža ruta do restorana je preko obilaznice. Isključite se sa autoputa na isključenju
+                za Rakovicu i Voždovac (isključenje je posle trećeg tunela nakon ostružničkog mosta). </li>
+                <li>Posle isključenja sa autoputa trebalo bi da se uključite na Bulevar JNA. </li>
+                <li>Vozite bulevarom do samog skretanja za <strong>Memorijalni park Jajinci</strong> (sa leve strane bi trebalo da se nalazi Idea
+                Jajinci, na semaforu skrećete desno).</li>
+                <li>Nakon skretanja memorijalni park će biti sa desne strane, vi nastavljate pravo.</li>
+                <li>Nakon 400m sa leve strane biće ulaz na parking restorana.</li> 
+                <br/>
+                Ukoliko imate bilo kakva pitanja slobodno nazovite:
+                Zoran (Micko)- 063/8743-307
+            </div>
+            <a href="https://maps.google.com/?q=Forest+hall" target="_blank" class="btn-map">
+                Otvori u Google Maps
+            </a>
+
+            <h3>Praktične informacije</h3>
+            <div class="venue-content section-location-desc">
+                Na Booking-u i Airbnb-u možete pronaći veliki broj privatnih smeštaja koji su svakako povoljnija
+                opcija. Ukoliko Vam je cilj da smeštaj bude u blizini Forest Hall-a, naš savet je da privatan
+                smeštaj potražite u blizini restorana Mali Vikend.
+
+                1. <a href="https://www.booking.com/hotel/rs/rivijera-city.sr.html">Rivijera City</a>
+                2. <a href="https://www.booking.com/hotel/rs/beo-green-view.sr.html">Beo Green View </a>
+                3. <a href="https://www.booking.com/hotel/rs/apartmani-41-u-beogradu.sr.html">Forty One Suites Belgrade Apartments</a>
+
+                Ukoliko ste ipak za hotelski smeštaj, evo nekoliko predloga:
+                <h4>Voždovac</h4>
+                <a href="booking.com/hotel/rs/m.html">Hotel M</a> - Bulevar Oslobođenja, Voždovac, 6,5 km od restorana, 15-ak min vožnje od restorana
+                <a href="https://www.booking.com/hotel/rs/apart-maksimum.html">Apart Hotel Maksimum</a>, Voždovac, 4,5km od restorana, 10-ak min vožnje od restorana
+                <br/>
+                <h4>Opcije bliže centru grada, privatni i hotelski smeštaj</h4>
+                1. <a href="https://www.booking.com/hotel/rs/mark.html">Hotel Mark</a>
+                2. <a href="https://www.booking.com/hotel/rs/nomad-luxury-suits.html">Nomad Luxury Suites</a>
+                3. <a href="https://www.booking.com/hotel/rs/kondina-suites.html">Kondina Suites</a>
+
+                <strong>PREVOZ</strong>
+                Taxi Prevoz
+                Pink Taxi 19803 5 835
+                Naxi Taxi 19804
+                Beogradski Taxi 19801
+
+                <strong>Safe Driver</strong>
+                Safe-Driver Beograd +381658357453
+                Safe Driving BG +381606337007
             </div>
         </div>
     </section>
 
+    <!-- Floating RSVP Button -->
+    <a href="#rsvp" class="floating-rsvp-btn">
+        <span class="pulse-ring"></span>
+        Potvrdite dolazak
+    </a>
+
     <!-- RSVP Section -->
-    <section class="rsvp-section">
+    <section class="rsvp-section" id="rsvp">
         <div class="container">
-            <h2 class="section-title">Vidimo se!</h2>
-            <p class="rsvp-text">Molimo da nas obavestite o vašem dolasku do 16.04.2026.</p>
-            <a href="mailto:wedding@example.com?subject=RSVP" class="btn-rsvp">Posaljite mejl</a>
+            <h2 class="rsvp-title">Potvrdite Vaš dolazak</h2>
+            <p class="rsvp-deadline">Molimo Vas da nam potvrdite dolazak najkasnije do <strong>25. aprila</strong></p>
+            <div class="rsvp-contacts">
+                <div class="rsvp-contact">
+                    <span class="contact-name">Kristina</span>
+                    <a href="tel:+381628167640" class="contact-phone">+381 62 816 7640</a>
+                </div>
+                <div class="rsvp-contact">
+                    <span class="contact-name">Dušan</span>
+                    <a href="tel:+381694787847" class="contact-phone">+381 69 478 7847</a>
+                </div>
+            </div>
+            <p class="rsvp-message">Radujemo se da naš poseban dan proslavimo u vašem društvu!</p>
         </div>
     </section>
 
@@ -140,13 +239,38 @@
     </footer>
 
     <script>
+        // Countdown Timer
+        const weddingDate = new Date('May 16, 2026 13:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p class="countdown-complete">Venčanje je počelo!</p>';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -170,4 +294,5 @@
         });
     </script>
 </body>
+
 </html>

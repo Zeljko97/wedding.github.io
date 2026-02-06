@@ -9,11 +9,15 @@
     --baby-blue: #89CFF0;
     --baby-blue-light: #B4E4FF;
     --baby-blue-dark: #5FA8D3;
+    --blue-dark: #3098d4;
     --white: #FFFFFF;
+    --cream: #FDF8F3;
     --text-dark: #2C3E50;
     --text-light: #7F8C8D;
     --gold: #D4AF37;
+    --gold-light: #E8D48A;
     --shadow: rgba(137, 207, 240, 0.3);
+    --shadow-soft: rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -218,8 +222,151 @@ section {
 /* Date Section */
 .date-section {
     background: linear-gradient(to bottom, var(--white) 0%, var(--baby-blue-light) 100%);
+    text-align: center;
 }
 
+.section-call {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+    line-height: 1.9;
+}
+
+.section-call-second {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--baby-blue-dark);
+}
+
+/* Schedule List - Clean readable style */
+.section-schedule {
+    list-style: none;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section-schedule li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    padding: 15px 25px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 2px 10px var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-schedule li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px var(--shadow-soft);
+}
+
+/* Location Section Headers */
+.section-location {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--baby-blue-dark);
+    text-align: center;
+}
+
+h3.section-location {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+h3.section-location::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    margin: 10px auto 0;
+}
+
+/* Location Description - Clean readable style */
+.section-location-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 35px;
+    box-shadow: 0 5px 20px var(--shadow-soft);
+    text-align: left;
+    display: block;
+    white-space: pre-line;
+}
+
+.section-location-desc strong {
+    color: var(--baby-blue-dark);
+    font-weight: 600;
+}
+
+.section-location-desc a {
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--blue-dark);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.section-location-desc a:hover {
+    color: var(--baby-blue-dark);
+    border-bottom-color: var(--baby-blue-dark);
+}
+
+.section-location-desc h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--baby-blue-dark);
+    margin: 25px 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: normal;
+}
+
+.section-location-desc li {
+    margin-left: 25px;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+/* Google Maps Button */
+.btn-map {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--baby-blue) 0%, var(--baby-blue-dark) 100%);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    margin: 15px 0 30px;
+}
+
+.btn-map:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow);
+    background: linear-gradient(135deg, var(--baby-blue-dark) 0%, var(--blue-dark) 100%);
+}
+
+/* Calendar Card */
 .calendar-card {
     max-width: 400px;
     margin: 0 auto;
@@ -303,6 +450,60 @@ section {
     font-size: 1.2rem;
     color: var(--text-dark);
     font-style: italic;
+}
+
+/* Countdown Section */
+.countdown-section {
+    background: linear-gradient(135deg, var(--baby-blue-dark) 0%, var(--blue-dark) 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 15px;
+    min-width: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-number {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.countdown-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-complete {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--white);
 }
 
 /* Gallery Section */
@@ -400,11 +601,17 @@ section {
     background: linear-gradient(to bottom, var(--white) 0%, var(--baby-blue-light) 100%);
 }
 
+.venue-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--baby-blue-dark);
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+}
+
 .venue-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: start;
+    display: block;
 }
 
 .venue-info {
@@ -460,6 +667,7 @@ section {
     transform: translateX(50px);
     opacity: 0;
     transition: all 0.8s ease-out;
+    margin-top: 2rem;
 }
 
 .map-container.visible {
@@ -495,11 +703,134 @@ section {
     box-shadow: 0 8px 30px var(--shadow);
 }
 
+/* Floating RSVP Button */
+.floating-rsvp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, var(--gold) 0%, #c9a227 100%);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 5px 25px rgba(212, 175, 55, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: floatButton 3s ease-in-out infinite;
+}
+
+.floating-rsvp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 35px rgba(212, 175, 55, 0.5);
+}
+
+.pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid var(--gold);
+    animation: pulseRing 2s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatButton {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
 /* RSVP Section */
 .rsvp-section {
     background: linear-gradient(135deg, var(--baby-blue) 0%, var(--baby-blue-dark) 100%);
     color: var(--white);
     text-align: center;
+    padding: 80px 20px;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1); }
+    50% { box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.2); }
+}
+
+.rsvp-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.rsvp-deadline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.rsvp-deadline strong {
+    font-weight: 600;
+    color: var(--gold-light);
+}
+
+.rsvp-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.rsvp-contact {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-name {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-phone {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-phone:hover {
+    color: var(--gold-light);
+}
+
+.rsvp-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
 }
 
 .rsvp-text {
@@ -535,10 +866,17 @@ section {
     padding: 40px 20px;
 }
 
+.footer p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
 .heart-divider {
     color: var(--baby-blue);
     font-size: 2rem;
     margin: 20px 0;
+    font-style: normal;
 }
 
 /* Responsive Design */
@@ -558,6 +896,70 @@ section {
 
     .section-title {
         font-size: 2.5rem;
+    }
+
+    .section-call {
+        font-size: 1.3rem;
+        padding: 0 15px;
+    }
+
+    .section-location {
+        font-size: 2.2rem;
+    }
+
+    h3.section-location {
+        font-size: 2rem;
+    }
+
+    .section-location-desc {
+        font-size: 1.1rem;
+        padding: 20px;
+        margin: 0 10px 2rem;
+    }
+
+    .section-schedule li {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    .floating-rsvp-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .rsvp-contacts {
+        gap: 30px;
+    }
+
+    .rsvp-contact {
+        padding: 20px 30px;
+    }
+
+    .rsvp-title {
+        font-size: 2.5rem;
+    }
+
+    .countdown-title {
+        font-size: 2rem;
+    }
+
+    .countdown-timer {
+        gap: 15px;
+    }
+
+    .countdown-item {
+        padding: 20px 25px;
+        min-width: 80px;
+    }
+
+    .countdown-number {
+        font-size: 2.2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.75rem;
     }
 
     .venue-content {
@@ -600,10 +1002,20 @@ section {
 
     .calendar-card {
         max-width: 100%;
+        margin: 0 15px;
     }
 
     .btn-rsvp {
         padding: 15px 30px;
         font-size: 1rem;
+    }
+
+    .section-location-desc {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .section-schedule li {
+        font-size: 1.1rem;
     }
 }
