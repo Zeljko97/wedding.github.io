@@ -6,17 +6,18 @@
 }
 
 :root {
-    --baby-blue: #9E4A5A;
-    --baby-blue-light: #E8D4D8;
-    --baby-blue-dark: #722F37;
-    --blue-dark: #5C1A22;
+    --baby-blue: #6589b9;
+    --baby-blue-light: #F5F0E8;
+    --baby-blue-dark: #8BA3C4;
+    --baby-blue-count: #b5c2d4;
+    --blue-dark: #7391B3;
     --white: #FFFFFF;
-    --cream: #FDF8F5;
-    --text-dark: #3D2327;
-    --text-light: #8B7577;
+    --cream: #FAF5EF;
+    --text-dark: #2C3E50;
+    --text-light: #6b7280;
     --gold: #D4AF37;
     --gold-light: #E8D48A;
-    --shadow: rgba(114, 47, 55, 0.25);
+    --shadow: rgba(163, 184, 212, 0.25);
     --shadow-soft: rgba(0, 0, 0, 0.08);
 }
 
@@ -37,11 +38,11 @@ body {
 .hero {
     height: 100vh;
     background:
-        linear-gradient(135deg, rgba(114, 47, 55, 0.75) 0%, rgba(114, 47, 55, 0.8) 50%, rgba(92, 26, 34, 0.85) 100%),
+        linear-gradient(135deg, rgba(199, 208, 219, 0.75) 0%, rgba(173, 191, 216, 0.8) 50%, rgba(138, 173, 212, 0.85) 100%),
         url('images/image2.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +50,9 @@ body {
     overflow: hidden;
 }
 
+.mt-4 {
+    margin-top: 130px;
+}
 .hero::before {
     content: '';
     position: absolute;
@@ -141,6 +145,8 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-size: 2rem;
     animation: float 15s infinite ease-in-out;
+    font-variant-emoji: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
 }
 
 .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
@@ -214,14 +220,13 @@ section {
 .section-title {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5rem;
-    text-align: center;
     margin-bottom: 3rem;
     color: var(--baby-blue-dark);
 }
 
 /* Date Section */
 .date-section {
-    background: linear-gradient(to bottom, var(--white) 0%, var(--baby-blue-light) 100%);
+    background: var(--baby-blue-light);
     text-align: center;
 }
 
@@ -300,7 +305,7 @@ h3.section-location::after {
     font-size: 1.05rem;
     font-weight: 400;
     color: var(--text-dark);
-    margin-bottom: 2.5rem;
+    /* margin-bottom: 2.5rem; */
     background: rgba(255, 255, 255, 0.9);
     padding: 30px 35px;
     box-shadow: 0 5px 20px var(--shadow-soft);
@@ -366,7 +371,7 @@ h3.section-location::after {
 .btn-map {
     display: inline-block;
     padding: 12px 30px;
-    background: linear-gradient(135deg, var(--baby-blue) 0%, var(--baby-blue-dark) 100%);
+    background: var(--baby-blue);
     color: var(--white);
     text-decoration: none;
     border-radius: 50px;
@@ -381,7 +386,7 @@ h3.section-location::after {
 .btn-map:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px var(--shadow);
-    background: linear-gradient(135deg, var(--baby-blue-dark) 0%, var(--blue-dark) 100%);
+    background: var(--baby-blue-dark);
 }
 
 /* Calendar Card */
@@ -403,7 +408,7 @@ h3.section-location::after {
 }
 
 .calendar-header {
-    background: linear-gradient(135deg, var(--baby-blue-dark) 0%, var(--blue-dark) 100%);
+    background: var(--baby-blue-dark);
     color: var(--white);
     padding: 20px;
     display: flex;
@@ -472,7 +477,7 @@ h3.section-location::after {
 
 /* Countdown Section */
 .countdown-section {
-    background: linear-gradient(135deg, var(--baby-blue-dark) 0%, var(--blue-dark) 100%);
+    background: var(--baby-blue-count);
     padding: 60px 20px;
     text-align: center;
 }
@@ -616,7 +621,7 @@ h3.section-location::after {
 
 /* Venue Section */
 .venue-section {
-    background: linear-gradient(to bottom, var(--white) 0%, var(--baby-blue-light) 100%);
+    background: var(--baby-blue-light);
 }
 
 .venue-section h3 {
@@ -626,6 +631,94 @@ h3.section-location::after {
     color: var(--baby-blue-dark);
     text-align: center;
     margin: 2.5rem 0 1.5rem;
+}
+
+/* Hierarchical Headings for Practical Info */
+.section-main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--baby-blue-dark);
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+.practical-info-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-soft);
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.info-title-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--baby-blue-dark);
+    text-align: left;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-title-h2:first-child {
+    margin-top: 0;
+}
+
+.info-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 2;
+    /* margin-left: 20px; */
+    margin-bottom: 1.5rem;
+    /* white-space: pre-line; */
+}
+
+.practical-info-container .info-title-h3,
+.practical-info-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--baby-blue);
+    text-align: left !important;
+    margin: 1.5rem 0 0.8rem 20px;
+}
+
+.info-content-indented {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 2;
+    margin-left: 40px;
+    margin-bottom: 1.5rem;
+    /* white-space: pre-line; */
+}
+
+.info-content a,
+.info-content-indented a {
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--blue-dark);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.info-content a:hover,
+.info-content-indented a:hover {
+    color: var(--baby-blue-dark);
+    border-bottom-color: var(--baby-blue-dark);
+}
+
+.info-content strong,
+.info-content-indented strong {
+    color: var(--baby-blue-dark);
+    font-weight: 600;
+    display: block;
+    /* margin-top: 1rem; */
 }
 
 .venue-content {
@@ -727,14 +820,14 @@ h3.section-location::after {
     bottom: 30px;
     right: 30px;
     padding: 15px 25px;
-    background: linear-gradient(135deg, var(--baby-blue-dark) 0%, var(--blue-dark) 100%);
+    background: var(--baby-blue-dark);
     color: var(--white);
     text-decoration: none;
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
-    box-shadow: 0 5px 25px rgba(114, 47, 55, 0.4);
+    box-shadow: 0 5px 25px rgba(139, 163, 196, 0.4);
     z-index: 1000;
     transition: all 0.3s ease;
     animation: floatButton 3s ease-in-out infinite;
@@ -742,7 +835,7 @@ h3.section-location::after {
 
 .floating-rsvp-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 35px rgba(114, 47, 55, 0.5);
+    box-shadow: 0 8px 35px rgba(139, 163, 196, 0.5);
 }
 
 .pulse-ring {
@@ -777,7 +870,7 @@ h3.section-location::after {
 
 /* RSVP Section */
 .rsvp-section {
-    background: linear-gradient(135deg, var(--baby-blue) 0%, var(--baby-blue-dark) 100%);
+    background: var(--baby-blue-dark);
     color: var(--white);
     text-align: center;
     padding: 80px 20px;
@@ -845,7 +938,7 @@ h3.section-location::after {
 }
 
 .rsvp-message {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 1.1rem;
     font-style: italic;
     opacity: 0.9;
@@ -938,6 +1031,34 @@ h3.section-location::after {
     .section-schedule li {
         font-size: 1.2rem;
         padding: 10px 15px;
+    }
+
+    .section-main-title {
+        font-size: 2.5rem;
+    }
+
+    .practical-info-container {
+        padding: 20px 25px;
+        margin: 0 10px 2rem;
+    }
+
+    .info-title-h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-title-h3 {
+        font-size: 1.1rem;
+        margin-left: 15px;
+    }
+
+    .info-content {
+        font-size: 1rem;
+        margin-left: 15px;
+    }
+
+    .info-content-indented {
+        font-size: 1rem;
+        margin-left: 30px;
     }
 
     .floating-rsvp-btn {
